@@ -28,7 +28,7 @@ export default class Home extends React.Component {
     deleteNote(noteId) {
         let notes = window.localStorage.getItem("note_list");
         notes = JSON.parse(notes);
-        notes = notes.filter((note) => note.id != noteId);
+        notes = notes.filter((note) => note.id !== noteId);
         this.updateNotes(notes);
     }
 

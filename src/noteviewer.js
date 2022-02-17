@@ -9,7 +9,7 @@ const NoteViewer = (props) => {
     const loadNote = () => {
         let notes = window.localStorage.getItem("note_list");
         notes = JSON.parse(notes);
-        noteData = notes.find((note) => note.id == noteId);
+        noteData = notes.find((note) => note.id === noteId);
     }
 
     loadNote();

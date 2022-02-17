@@ -22,7 +22,7 @@ export default class NoteList extends React.Component {
 
     render() {
         let notes = JSON.parse(this.state.noteList);
-        if (!notes || notes?.length == 0) {
+        if (!notes || notes?.length === 0) {
             notes = "No notes available";
         } else {
             notes = notes.map((note) => <Note deleteNote={this.props.deleteNote} key={note.id} noteId={note.id} title={note.title} note={note.note} />);
